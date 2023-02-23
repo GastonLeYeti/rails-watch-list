@@ -13,5 +13,14 @@ Rails.application.routes.draw do
   patch 'movies/:id', to: 'movies#update'
   delete 'movies/:id', to: 'movies#destroy'
 
+  get 'movies/:id/list', to: 'lists#new', as: :new_list
+
+  post 'list', to: 'lists#create', as: :create_list
+  get 'list/:id', to: 'lists#show', as: :list
+  delete 'list/:id', to: 'lists#destroy', as: :delete_list
+  get 'list/:id/edit', to: 'lists#edit', as: :edit_list
+  patch 'list/:id', to: 'lists#update', as: :update_list
+
+
 
 end

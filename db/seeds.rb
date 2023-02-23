@@ -15,3 +15,20 @@ Movie.create(title: "Dimension X", overview: "Un voyage dans une autre dimension
 Movie.create(title: "Hypernova", overview: "Une équipe de scientifiques part en mission pour sauver la Terre d'une étoile en train d'exploser.", poster_url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5YrWvDZmnJhpOFAIEaIKYMILBcl.jpg", rating: 0.0)
 
 puts "Created #{Movie.count} movies"
+
+
+# delet all lists in the database
+List.destroy_all
+
+# create 10 lists
+
+List.create(name: "Action")
+List.create(name: "Comedy")
+List.create(name: "Drama")
+List.create(name: "Horror")
+List.create(name: "Romance")
+List.create(name: "Thriller")
+List.create(name: "Adventure")
+List.create(name: "Animation")
+List.create(name: "Crime")
+List.create(name: "Fantasy")

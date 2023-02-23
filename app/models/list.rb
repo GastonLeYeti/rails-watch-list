@@ -1,5 +1,5 @@
 class List < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
   has_many :movies, through: :bookmarks
-  validates :comment, length: { minimum: 6 }
+  validates :name, uniqueness: true, presence: true
 end

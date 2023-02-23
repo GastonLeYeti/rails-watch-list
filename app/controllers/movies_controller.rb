@@ -3,7 +3,6 @@ class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
 
   def index
-    # raise
     @movies = Movie.all
   end
 
@@ -46,7 +45,4 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
   end
 
-  def home
-    @movies = Movie.all
-  end
 end
